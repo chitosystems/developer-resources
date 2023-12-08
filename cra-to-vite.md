@@ -44,3 +44,23 @@ export default defineConfig({
   },
 })
 ```
+
+6. Move the index.html file from the public folder to the root of the project.
+7. Remove all the occurrences of %PUBLIC_URL% from index.html.
+The lines affected should look like the following lines after the change:
+```html
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json" />
+```
+8. Add the script tag below into the body of index.html:
+```html
+<script type="module" src="/src/index.jsx"></script>
+```
+
+9. Change the extension of .js files to .jsx, if they contain jsx syntax.  
+10. Update all environment variables from REACT_APP to VITE.
+  > Replace REACT_APP_HOST_URL to VITE_HOST_URL
+> 
+11. ```code
+    npm install
+    ```
